@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
-	"log"
+	/*	"io/ioutil"
+		"log"*/
 	"os"
 
 	"github.com/mitchellh/cli"

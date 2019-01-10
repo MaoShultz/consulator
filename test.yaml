@@ -1,0 +1,7 @@
+
+outer_dict1:
+  - { name: inner_dict1 }
+  - { name: inner_dict2 }
+
+
+  
