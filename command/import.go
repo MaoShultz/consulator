@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/inhuman/consulator/command/configparser"
+	"./configparser"
 
 	"github.com/hashicorp/consul/api"
 	"github.com/mitchellh/cli"

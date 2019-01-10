@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/inhuman/consulator/command/configparser"
+	"./configparser"
 
 	"github.com/mitchellh/cli"
 )

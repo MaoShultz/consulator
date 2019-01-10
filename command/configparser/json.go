@@ -23,11 +23,9 @@ func parseJson(fp io.Reader, prefix []string, glue string) error {
 }
 
 func jsonWalk(prefix []string, obj *jason.Object) error {
-	log.Println(obj)
+
 	for k, v := range obj.Map() {
 		key := strings.Join(append(prefix, k), "/")
-
-		log.Println(key)
 
 		if _, ok := data[key]; ok {
 			log.Println("Warning, Duplicate key ", key)
