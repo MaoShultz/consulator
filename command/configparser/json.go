@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"strings"
 
 	"github.com/inhuman/jason"
@@ -24,6 +25,11 @@ func parseJson(fp io.Reader, prefix []string, glue string) error {
 func jsonWalk(prefix []string, obj *jason.Object) error {
 	for k, v := range obj.Map() {
 		key := strings.Join(append(prefix, k), "/")
+
+		if _, ok := data[key]; ok {
+			log.Println("Warning, Duplicate key ", key)
+		}
+
 		switch v.Interface().(type) {
 		case string:
 			data[key] = []byte(fmt.Sprintf("%v", v.Interface()))
